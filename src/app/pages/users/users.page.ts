@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonAccordionGroup } from '@ionic/angular';
 import { WorldsacrossService } from 'src/app/worldsacross.service';
 
 @Component({
@@ -8,6 +9,9 @@ import { WorldsacrossService } from 'src/app/worldsacross.service';
   standalone: false,
 })
 export class UsersPage implements OnInit {
+  @ViewChild('accordionGroup', { static: true })
+  accordionGroup!: IonAccordionGroup;
+
   users: any[] = [];
 
   constructor(private worldsAcrossService: WorldsacrossService) {}
@@ -18,4 +22,15 @@ export class UsersPage implements OnInit {
       (error) => console.error('Error retirando tutores:', error),
     );
   }
+
+  showDetails() {}
+
+  toggleAccordion = () => {
+    const nativeEl = this.accordionGroup;
+    if (nativeEl.value === 'second') {
+      nativeEl.value = undefined;
+    } else {
+      nativeEl.value = 'second';
+    }
+  };
 }

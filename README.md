@@ -2,7 +2,7 @@
 
 ## Descripcion
 
-La aplicacion muestra 3 tabs, cada una con una lista de datos retirados de una URL.
+La aplicacion muestra 3 tabs, cada una con una lista de datos retirados de una API. Cada tab muestra datos de una endpoint diferente.
 
 ## Ejecucion
 

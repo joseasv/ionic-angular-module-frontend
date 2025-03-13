@@ -1,7 +1,11 @@
-<ion-content [fullscreen]="true">
-  <ion-list>
-    <ion-item *ngFor="let user of users">
-      {{user.first_name}} {{user.last_name}}
+<ion-accordion-group #accordionGroup>
+  <ion-accordion *ngFor="let user of users" value="{{user.id}}">
+    <ion-item slot="header" color="light">
+      <ion-label>{{user.first_name}} {{user.last_name}}</ion-label>
     </ion-item>
-  </ion-list>
-</ion-content>
+    <div class="ion-padding" slot="content">
+      <ion-item>{{user.email}}</ion-item>
+      <ion-item>{{user.phone}}</ion-item>
+    </div>
+  </ion-accordion>
+</ion-accordion-group>
