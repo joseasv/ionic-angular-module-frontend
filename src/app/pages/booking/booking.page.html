@@ -7,8 +7,16 @@
 
   <ion-list>
     <ion-item *ngFor="let book of booking">
-      {{book.date}} {{book.start_time}} {{book.end_time}} realizada por:
-      {{book.user.first_name}} {{book.user.last_name}}
+      <ion-label>
+        <h2>Fecha: {{book.date}}</h2>
+
+        <div>Hora de inicio: {{book.start_time}}</div>
+        <div>Hora de finalizacion: {{book.end_time}}</div>
+        <div>
+          Realizada por: {{book.staff.first_name}} {{book.staff.last_name}}
+        </div>
+        <div>Del usuario: {{book.user.first_name}} {{book.user.last_name}}</div>
+      </ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
