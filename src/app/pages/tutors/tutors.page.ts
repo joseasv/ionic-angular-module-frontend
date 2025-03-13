@@ -26,15 +26,11 @@ export class TutorsPage implements OnInit {
     );
   }
 
-  onContextChange(ctxt: any): void {
-    console.log(ctxt);
-    const selectedSpeciality = ctxt.detail.value;
-    if (selectedSpeciality === 'All specialities') {
-      this.tutors = this.allTutors;
-    } else {
-      this.tutors = this.allTutors.filter(
-        (tutor) => tutor.speciality === selectedSpeciality,
-      );
-    }
+  handleInput(event: Event): void {
+    const target = event.target as HTMLIonSearchbarElement;
+    const query = target.value?.toLowerCase() || '';
+    this.tutors = this.allTutors.filter((tutor) =>
+      tutor.speciality.toLowerCase().includes(query),
+    );
   }
 }

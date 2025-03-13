@@ -1,15 +1,14 @@
 <ion-content [fullscreen]="true">
-  <ion-select label="Speciality" (ionChange)="onContextChange($event)">
-    <ion-select-option
-      *ngFor="let speciality of specialities"
-      value="{{speciality}}"
-      >{{speciality}}</ion-select-option
+  <ion-toolbar>
+    <ion-searchbar [debounce]="1000" (ionInput)="handleInput($event)"
+      >Filtrar por especialidad</ion-searchbar
     >
-  </ion-select>
+  </ion-toolbar>
 
   <ion-list>
     <ion-item *ngFor="let tutor of tutors">
       {{tutor.first_name}} {{tutor.last_name}}
+      <ion-badge>{{tutor.speciality}}</ion-badge>
     </ion-item>
   </ion-list>
 </ion-content>

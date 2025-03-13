@@ -1,4 +1,10 @@
 <ion-content [fullscreen]="true">
+  <ion-select label="Reservado por" (ionChange)="onContextChange($event)">
+    <ion-select-option *ngFor="let user of users" value="{{user.id}}"
+      >{{user.first_name}} {{user.last_name}}</ion-select-option
+    >
+  </ion-select>
+
   <ion-list>
     <ion-item *ngFor="let book of booking">
       {{book.date}} {{book.start_time}} {{book.end_time}} realizada por:
