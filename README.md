@@ -1,11 +1,11 @@
-# Prueba de frontend con Ionic y Angular mediante modulos
+# Prueba de frontend con Ionic y Angular mediante módulos
 
-## Descripcion
+## Descripción
 
-La aplicacion muestra 3 tabs, cada una con una lista de datos retirados de una API. Cada tab muestra datos de una endpoint diferente.
+La aplicación muestra 3 tabs, cada una con una lista de datos retirados de una API. Cada tab muestra datos de un endpoint diferente.
 
-## Ejecucion
+## Ejecución
 
-Aparte de tener Angular, Ionic y Node instalado, solo basta con ejecutar lo siguiente en la raiz del repositorio:
+Aparte de tener Angular, Ionic y Node instalado, solo basta con ejecutar lo siguiente en la raíz del repositorio:
 1. npm install
 2. npm start
