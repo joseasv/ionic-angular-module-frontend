@@ -9,12 +9,8 @@ import { TutorsPageRoutingModule } from './tutors-routing.module';
 import { TutorsPage } from './tutors.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    TutorsPageRoutingModule
-  ],
-  declarations: [TutorsPage]
+  imports: [CommonModule, FormsModule, IonicModule, TutorsPageRoutingModule],
+  declarations: [TutorsPage],
+  exports: [TutorsPage],
 })
 export class TutorsPageModule {}

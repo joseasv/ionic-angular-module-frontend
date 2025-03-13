@@ -1,13 +1,51 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-tabs>
+  <ion-tab tab="tutors">
+    <div id="home-page">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Tutores</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <app-tutors></app-tutors>
+    </div>
+  </ion-tab>
+  <ion-tab tab="users">
+    <div id="radio-page">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Usuarios</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <div class="example-content">Lista de usuarios</div>
+      </ion-content>
+    </div>
+  </ion-tab>
+  <ion-tab tab="bookings">
+    <div id="library-page">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Reservas</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <div class="example-content">Lista de reservas</div>
+      </ion-content>
+    </div>
+  </ion-tab>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">home</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="tutors">
+      <ion-icon name="library"></ion-icon>
+      Tutores
+    </ion-tab-button>
+    <ion-tab-button tab="users">
+      <ion-icon name="people"></ion-icon>
+      Usuarios
+    </ion-tab-button>
+    <ion-tab-button tab="bookings">
+      <ion-icon name="bookmarks"></ion-icon>
+      Reservas
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
