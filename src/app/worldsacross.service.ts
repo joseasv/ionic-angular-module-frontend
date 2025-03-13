@@ -3,16 +3,22 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class WorldsacrossService {
-  private baseURL = 'https://test.worldsacross.com/api'
+  private baseURL = 'https://test.worldsacross.com/api';
 
-  constructor(private http: HttpClient) {
-
-  }
+  constructor(private http: HttpClient) {}
 
   getTutors(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.baseURL}/tutors`)
+    return this.http.get<any[]>(`${this.baseURL}/tutors`);
+  }
+
+  getUsers(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseURL}/users`);
+  }
+
+  getBooking(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseURL}/booking`);
   }
 }
