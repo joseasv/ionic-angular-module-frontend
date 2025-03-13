@@ -16,21 +16,17 @@
           <ion-title>Usuarios</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-content>
-        <div class="example-content">Lista de usuarios</div>
-      </ion-content>
+      <app-users></app-users>
     </div>
   </ion-tab>
-  <ion-tab tab="bookings">
+  <ion-tab tab="booking">
     <div id="library-page">
       <ion-header>
         <ion-toolbar>
           <ion-title>Reservas</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-content>
-        <div class="example-content">Lista de reservas</div>
-      </ion-content>
+      <app-booking></app-booking>
     </div>
   </ion-tab>
 
@@ -43,7 +39,7 @@
       <ion-icon name="people"></ion-icon>
       Usuarios
     </ion-tab-button>
-    <ion-tab-button tab="bookings">
+    <ion-tab-button tab="booking">
       <ion-icon name="bookmarks"></ion-icon>
       Reservas
     </ion-tab-button>

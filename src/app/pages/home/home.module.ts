@@ -8,6 +8,8 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
 import { TutorsPageModule } from '../tutors/tutors.module';
+import { UsersPageModule } from '../users/users.module';
+import { BookingPageModule } from '../booking/booking.module';
 
 @NgModule({
   imports: [
@@ -16,6 +18,8 @@ import { TutorsPageModule } from '../tutors/tutors.module';
     IonicModule,
     HomePageRoutingModule,
     TutorsPageModule,
+    UsersPageModule,
+    BookingPageModule,
   ],
   declarations: [HomePage],
 })

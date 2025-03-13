@@ -1,4 +1,12 @@
 <ion-content [fullscreen]="true">
+  <ion-select label="Speciality" (ionChange)="onContextChange($event)">
+    <ion-select-option
+      *ngFor="let speciality of specialities"
+      value="{{speciality}}"
+      >{{speciality}}</ion-select-option
+    >
+  </ion-select>
+
   <ion-list>
     <ion-item *ngFor="let tutor of tutors">
       {{tutor.first_name}} {{tutor.last_name}}
